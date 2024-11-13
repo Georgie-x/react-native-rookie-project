@@ -1,38 +1,29 @@
 import { Text, TouchableOpacity, View } from "react-native"
 import styles from "./styles"
-import { useState } from "react"
+import Props from "../app/typeDefs"
 
-export default function GameBoard() {
-	const [boardData, setBoardData] = useState<Array<string>>(Array(9).fill(""))
+const GameBoard = (props:Props) => {
+
+	const handleCellPress = (index: number) => {
+		if (props.boardData[index] === "") {
+			const newBoardData = [...props.boardData]
+			newBoardData[index] = props.turn
+			props.setBoardData(newBoardData)
+			
+			if (props.turn === "X") props.setTurn("O")
+			if (props.turn === "O") props.setTurn("X")
+		}
+	}
+
 	return (
 		<View style={styles.gameBoard}>
-			<TouchableOpacity style={styles.cell}id='cell1'>
-				<Text> hi</Text>
-			</TouchableOpacity>
-			<TouchableOpacity style={styles.cell} id='cell2'>
-				<Text> hi2</Text>
-			</TouchableOpacity>
-			<TouchableOpacity style={styles.cell} id='cell3'>
-				<Text> hi</Text>
-			</TouchableOpacity>
-			<TouchableOpacity style={styles.cell} id='cell4'>
-				<Text> hi</Text>
-			</TouchableOpacity>
-			<TouchableOpacity style={styles.cell} id='cell5'>
-				<Text> hi</Text>
-			</TouchableOpacity>
-			<TouchableOpacity style={styles.cell} id='cell6'>
-				<Text> hi</Text>
-			</TouchableOpacity>
-			<TouchableOpacity style={styles.cell} id='cell7'>
-				<Text> hi</Text>
-			</TouchableOpacity>
-			<TouchableOpacity style={styles.cell} id='cell8'>
-				<Text> hi</Text>
-			</TouchableOpacity>
-			<TouchableOpacity style={styles.cell} id='cell9'>
-				<Text> hi</Text>
-			</TouchableOpacity>
+			{props.boardData.map((cellData:string, index:number) => (
+				<TouchableOpacity key={index} style={styles.cell} onPress={() => handleCellPress(index)}>
+					<Text>{cellData}</Text>
+				</TouchableOpacity>
+			))}
 		</View>
 	)
 }
+
+export default GameBoard

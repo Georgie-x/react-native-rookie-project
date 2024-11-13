@@ -1,18 +1,21 @@
-import { Text, View } from "react-native"
+import { View } from "react-native"
 import styles from "./styles"
 import Headings from "./Headings"
-import GameButton from "./GameButton"
 import GameBoard from "./GameBoard"
 import WebLink from "./WebLink"
 import Instructions from "./Instructions"
+import { useState } from "react"
 
 export default function Index() {
+	const [boardData, setBoardData] = useState<string[]>(Array(9).fill(""))
+	const [turn, setTurn] = useState<string>("O")
+	const [message, setMessage] = useState("Noughts turn: Place a counter")
+
 	return (
 		<View style={styles.layout}>
 			<Headings />
-			<Instructions />
-			<GameBoard />
-			<GameButton />
+			<GameBoard boardData={boardData} setBoardData={setBoardData} turn={turn} setTurn={setTurn} message={message} setMessage={setMessage}/>
+			<Instructions boardData={boardData} setBoardData={setBoardData} turn={turn} setTurn={setTurn} message={message} setMessage={setMessage}/>
 			<WebLink />
 		</View>
 	)

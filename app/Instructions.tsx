@@ -1,8 +1,9 @@
 import { Text, View } from "react-native"
-import styles from "./styles"
+import Props from "./typeDefs"
 
-export default function Instructions() {
+export default function Instructions(props:Props) {
+	
 	return (
-		<Text>Press button to start</Text>
+		<Text>{props.message}</Text>
 	)
 }

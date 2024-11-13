@@ -3,21 +3,22 @@ import { StyleSheet } from "react-native"
 const styles = StyleSheet.create({
 	layout: {
 		flex: 1,
-		justifyContent: "space-between",
+		justifyContent: "space-around",
 		alignItems: "center",
 	},
 	title: {
-		color: "red",
-		fontSize: 24,
+		color: "blue",
+		fontSize: 28,
 		fontWeight: "bold",
 		textAlign: "center",
-		marginTop: 20,
+	
 	},
 	subTitle: {
-		color: "blue",
+		color: "red",
 		fontSize: 20,
 		fontWeight: "bold",
 		textAlign: "center",
+		padding:2,
 	},
 	cell: {
 		borderWidth: 2,
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
         height: "33%",
 		justifyContent: "center",
 		alignItems: "center",
-		fontSize: 20,
+		fontSize: 50,
 		fontWeight: "bold",
 		textAlign: "center",
 	},
@@ -43,6 +44,10 @@ const styles = StyleSheet.create({
 		alignItems: "center",
         backgroundColor: "pink",
 
+	},
+	linkText: {
+		color: 'blue',
+		textDecorationLine: 'underline',
 	},
 
 })

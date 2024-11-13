@@ -4,8 +4,8 @@ import styles from "./styles"
 export default function Headings() {
 	return (
 		<View>
-			<Text style={styles.title}>Georgiex first rn app</Text>
-			<Text style={styles.subTitle}>Noughts and Crosses</Text>
+			<Text style={styles.title}>Noughts and Crosses</Text>
+			<Text style={styles.subTitle}>My first React Native app</Text>
 		</View>
 	)
 }

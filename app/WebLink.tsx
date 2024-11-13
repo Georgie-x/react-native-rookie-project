@@ -1,8 +1,17 @@
-import { Text, View } from "react-native"
+import { Linking, TouchableOpacity, Text } from "react-native"
 import styles from "./styles"
 
-export default function WebLink() {
+const WebLink = () => {
+	const handlePress = () => {
+		const url = "https://georgiex.co.uk"
+		Linking.openURL(url).catch((err) => console.error("Error opening link:", err))
+	}
+
 	return (
-        <Text>Edit app/index.tsx to edit this screen.</Text>
+		<TouchableOpacity onPress={handlePress}>
+			<Text style={styles.linkText}>georgiex.co.uk</Text>
+		</TouchableOpacity>
 	)
 }
+
+export default WebLink
