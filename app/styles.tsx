@@ -5,51 +5,50 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: "space-around",
 		alignItems: "center",
+		backgroundColor: "hsla(200, 70%, 70%, 0.5)"
 	},
 	title: {
 		color: "blue",
 		fontSize: 28,
 		fontWeight: "bold",
 		textAlign: "center",
-	
 	},
 	subTitle: {
-		color: "red",
+		color: "purple",
 		fontSize: 20,
 		fontWeight: "bold",
 		textAlign: "center",
-		padding:2,
+		padding: 2,
 	},
 	cell: {
 		borderWidth: 2,
-		borderColor: "red",
+		borderColor: "purple",
 		borderRadius: 1,
 		width: "33%",
-        height: "33%",
+		height: "33%",
 		justifyContent: "center",
 		alignItems: "center",
 		fontSize: 50,
 		fontWeight: "bold",
 		textAlign: "center",
+		backgroundColor: "pink",
 	},
-    gameBoard: {
-        flexDirection: "row",
-        flexWrap: "wrap",
-		borderWidth: 2,
-		borderColor: "red",
-		borderRadius: 1,
+	gameBoard: {
+		flexDirection: "row",
+		flexWrap: "wrap",
+
 		width: 300,
 		height: 300,
 		justifyContent: "center",
 		alignItems: "center",
-        backgroundColor: "pink",
-
+	},
+	text: {
+		fontSize: 20,
 	},
 	linkText: {
-		color: 'blue',
-		textDecorationLine: 'underline',
+		color: "blue",
+		textDecorationLine: "underline",
 	},
-
 })
 
 export default styles

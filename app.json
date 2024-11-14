@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "rn-ttt",
-    "slug": "rn-ttt",
+    "name": "Georgiex first react native project",
+    "slug": "Noughts-and-Crosses",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.georgiex.NoughtsandCrosses"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +37,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "48be2e6b-a81f-4d09-94cb-c1bd3315e5a3"
+      }
     }
   }
 }
